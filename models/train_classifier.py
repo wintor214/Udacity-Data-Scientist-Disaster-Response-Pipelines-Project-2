@@ -23,11 +23,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 
 def load_data(database_filepath):
-    engine = create_engine('sqlite:///DisasterResponse.db')
+    #engine = create_engine('sqlite:///DisasterResponse.db')
+    engine = create_engine('sqlite:///'+database_filepath)
     df = pd.read_sql_table("data", con=engine)
     X = df['message']
     Y = df[df.columns[4:]]
-
+    Y = Y.astype(int)
+    category_names = Y.columns.tolist()
+    return X, Y, category_names
 
 def tokenize(text):
         # remove punctuation
