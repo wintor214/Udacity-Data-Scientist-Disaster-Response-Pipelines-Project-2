@@ -45,12 +45,15 @@ def clean_data(df):
     df = pd.concat([df, categories], axis=1)
     df.drop_duplicates(inplace=True)
     
+    return df
+    
 def save_data(df, database_filename):
     '''
    Stores data into a SQLite database
 
     '''
-    engine = create_engine('sqlite:///DisasterResponse.db')
+    #engine = create_engine('sqlite:///DisasterResponse.db')
+    engine = create_engine('sqlite:///'+database_filename)
     df.to_sql('data', engine, index=False)
 
 def main():
