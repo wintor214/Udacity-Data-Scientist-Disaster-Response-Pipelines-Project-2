@@ -54,7 +54,8 @@ def build_model():
     ])
     
     parameters = {
-    'clf__estimator__n_estimators' : [50, 100]
+    #'clf__estimator__n_estimators' : [50, 100]
+     'clf__estimator__n_estimators' : [15, 30]
     }
 
     cv = GridSearchCV(pipeline, param_grid=parameters)
