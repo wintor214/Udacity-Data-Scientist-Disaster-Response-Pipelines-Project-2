@@ -30,6 +30,9 @@ def load_data(database_filepath):
     Y = df[df.columns[4:]]
     Y = Y.astype(int)
     category_names = Y.columns.tolist()
+    #Replace rows where value is 2 with 1, dummy variables should only be 1 or 0
+    Y[Y == 2]=1
+    Y[Y == 2].sum(axis=0)
     return X, Y, category_names
 
 def tokenize(text):
@@ -64,15 +67,14 @@ def build_model():
 
 def evaluate_model(model, X_test, Y_test, category_names):
     y_pred = model.predict(X_test)
-    Y_pred = pd.DataFrame(data=y_pred, 
-                          index=Y_test.index, 
-                          columns=category_names)
-    print(classification_report(Y_test, Y_pred, target_names=category_names))
+   
+    target_names = category_names
+    print(classification_report(Y_test, y_pred, target_names))
 
 
 def save_model(model, model_filepath):
     import pickle
-    filename = 'model.pkl'
+    filename = 'classifier.pkl'
     pickle.dump(model, open(filename, 'wb'))
 
 
