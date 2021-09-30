@@ -1,12 +1,6 @@
 # Disaster Response Pipeline Project
 
-Table of Contents
-Project Motivation
-File Descriptions
-Components
-Instructions of How to Interact With Project
-Licensing, Authors, Acknowledgements, etc.
-Project Motivation
+## Project Motivation
 
 In this project, I built pipelines for analyzing disaster response data from Figure Eight to build a model that classifies disaster messages. The project includes a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data.
 
