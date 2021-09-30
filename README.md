@@ -10,7 +10,7 @@ Project Motivation
 
 In this project, I built pipelines for analyzing disaster response data from Figure Eight to build a model that classifies disaster messages. The project includes a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data.
 
-### File structure of the project:
+## File structure of the project:
 
     - app
     | - template
@@ -30,10 +30,10 @@ In this project, I built pipelines for analyzing disaster response data from Fig
 
     - README.md
 
-Project Components
+## Project Components
 There are three components I completed for this project.
 
-1. ETL Pipeline
+### 1. ETL Pipeline
 
 In a Python script, `process_data.py`, write a data cleaning pipeline that:
 
@@ -42,7 +42,7 @@ In a Python script, `process_data.py`, write a data cleaning pipeline that:
 * Cleans the data
 * Stores it in a SQLite database
 
-2. ML Pipeline
+### 2. ML Pipeline
 
 In a Python script, `train_classifier.py`, write a machine learning pipeline that:
 
@@ -53,7 +53,7 @@ In a Python script, `train_classifier.py`, write a machine learning pipeline tha
 * Outputs results on the test set
 * Exports the final model as a pickle file
 
-3. Flask Web App
+### 3. Flask Web App
 
 Build a flask web app:
 
@@ -61,7 +61,7 @@ Build a flask web app:
 * Add data visualizations using Plotly in the web app. One example is provided for you
 
 
-### Instructions:
+## Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
