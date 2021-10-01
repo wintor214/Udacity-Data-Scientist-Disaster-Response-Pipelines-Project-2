@@ -44,10 +44,12 @@ def index():
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
 
-    df1 = df.drop(['id', 'message', 'original', 'genre'], axis=1)
-    category_counts = df1.sum(axis=0).values
-    category_names = df1.columns
-    
+    category_counts = df.iloc[:, 4:].astype('float32').sum(axis=0)
+    category_names = list(category_counts.index)
+
+    mean_length_msg = df.message.str.len().groupby(df.genre).mean()
+    mean_length_msg_names = list(mean_length_msg.index)
+
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -63,6 +65,24 @@ def index():
                 'title': 'Distribution of Message Genres',
                 'yaxis': {
                     'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Genre"
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=mean_length_msg_names,
+                    y=mean_length_msg
+                )
+            ],
+
+            'layout': {
+                'title': 'Average Length of each message by Genre',
+                'yaxis': {
+                    'title': "Average Length"
                 },
                 'xaxis': {
                     'title': "Genre"
