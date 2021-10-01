@@ -54,6 +54,10 @@ Build a flask web app:
 * Modify file paths for database and model as needed
 * Add data visualizations using Plotly in the web app.
 
+![image 1](https://github.com/wintor214/Udacity-Data-Scientist-Disaster-Response-Pipelines-Project-2/blob/8b1eddc446884c753c8c0873e87eeadfc2214042/app/webapp%20pic%201.JPG)
+![image 2](https://github.com/wintor214/Udacity-Data-Scientist-Disaster-Response-Pipelines-Project-2/blob/8b1eddc446884c753c8c0873e87eeadfc2214042/app/webapp%20pic%202.JPG)
+![image 3](https://github.com/wintor214/Udacity-Data-Scientist-Disaster-Response-Pipelines-Project-2/blob/8b1eddc446884c753c8c0873e87eeadfc2214042/app/webapp%20pic%203.JPG)
+![image 4](https://github.com/wintor214/Udacity-Data-Scientist-Disaster-Response-Pipelines-Project-2/blob/8b1eddc446884c753c8c0873e87eeadfc2214042/app/webapp%20pic%204.JPG)
 
 ## Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
