@@ -38,6 +38,8 @@ def clean_data(df):
     
     # convert column from string to numeric
     categories[column] = categories[column].astype(int)
+    #Some values are 2 which will cause error during modeling and should be replaced with 1
+    categories.iloc[:, 0].replace(2, 1, inplace=True)
 
     df.drop('categories', axis=1, inplace=True)
     
